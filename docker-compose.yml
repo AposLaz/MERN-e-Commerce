@@ -1,0 +1,63 @@
+version: "3.5"
+
+services: 
+
+    frontend:
+        container_name: docker-react
+        hostname: docker-react
+        restart: always
+        build: 
+          context: ./frontend
+          dockerfile: Dockerfile 
+        command: npm start
+        networks:
+            - default
+        ports:
+            - '3000:3000'
+        volumes:
+            - .:/usr/src/react
+            - /react/node_modules
+        environment:
+          - CHOKIDAR_USEPOLLING=true
+        stdin_open: true
+        depends_on:
+            - server
+
+    server:
+        container_name: server-side
+        hostname: server-side
+        restart: always
+        build: 
+          context: ./server
+          dockerfile: Dockerfile
+        command: nodemon /usr/src/app/server/index.js 
+        networks:
+            - default
+        ports:
+            - '4000:4000'
+        volumes:
+            - .:/usr/src/app/
+        depends_on: 
+            - mongo
+      
+    mongo:
+        image: mongo:latest
+        container_name: mongo
+        hostname: mongo
+        #command: mongod --port 27018
+        networks:
+          - default
+        volumes: 
+          - data:/data/db
+        ports:
+          - "27017:27017"
+        expose:
+          - "27017"
+
+networks:
+    default:
+        driver: bridge
+
+
+volumes:
+    data: 

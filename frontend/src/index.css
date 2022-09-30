@@ -1,0 +1,57 @@
+/**
+  -------------------INSTRUCTIONS-------------------
+  @ 1rem = 16px;
+
+*/
+
+@font-face {
+  font-family: 'Montserrat-Regular';
+  src: url('./assets/font/Montserrat-Regular.ttf');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat-SemiBold';
+  src: url('./assets/font/Montserrat-SemiBold.ttf');
+  font-weight: normal;
+}
+
+
+@font-face {
+  font-family: 'Montserrat-Bold';
+  src: url('./assets/font/Montserrat-Bold.ttf');
+  font-weight: bold;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root{
+  --gray-bg: #404040;
+  --white: #fff;
+
+}
+html{
+  font-size: 1rem;
+  font-family: 'Montserrat-Regular';
+}
+
+header {
+  background-color: var(--gray-bg);
+  padding: 1rem; 
+}
+
+header a {
+  text-decoration: none;
+  color: var(--white);
+  font-family: 'Montserrat-Bold';
+}
+
+.container {
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+}
