@@ -31,12 +31,13 @@
 }
 :root{
   --gray-bg: #404040;
+  --dark-bg: #000;
   --white: #fff;
-
 }
 html{
   font-size: 1rem;
   font-family: 'Montserrat-Regular';
+  overflow-x: hidden;
 }
 
 header {
@@ -50,8 +51,13 @@ header a {
   font-family: 'Montserrat-Bold';
 }
 
+main{
+  padding: 1rem;
+}
+
 .container {
-  max-width: 1200px;
+  max-width: 100%;
   width: 90%;
   margin: 0 auto;
+  text-align: center;
 }

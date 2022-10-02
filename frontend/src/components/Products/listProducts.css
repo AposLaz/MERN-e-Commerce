@@ -1,0 +1,13 @@
+.list-product {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+@media only screen and (max-width: 600px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+}
+
