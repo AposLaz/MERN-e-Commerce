@@ -2,26 +2,34 @@ version: "3.5"
 
 services: 
 
-    frontend:
-        container_name: docker-react
-        hostname: docker-react
-        restart: always
-        build: 
-          context: ./frontend
-          dockerfile: Dockerfile 
-        command: npm start
-        networks:
-            - default
-        ports:
-            - '3000:3000'
-        volumes:
-            - .:/usr/src/react
-            - /react/node_modules
-        environment:
-          - CHOKIDAR_USEPOLLING=true
-        stdin_open: true
-        depends_on:
-            - server
+    # frontend:
+    #     container_name: docker-react
+    #     hostname: docker-react
+    #     restart: always
+    #     build: 
+    #       context: ./frontend
+    #       dockerfile: Dockerfile 
+    #     command: npm start
+    #     networks:
+    #         - default
+    #     ports:
+    #         - '3000:3000'
+    #     volumes:
+    #         - .:/usr/src/react
+    #         - /react/node_modules
+    #     environment:
+    #       - CHOKIDAR_USEPOLLING=true
+    #     stdin_open: true
+    #     depends_on:
+    #         - server
+    
+    # nginx:
+    #     build:
+    #      context: ./reverse-proxy
+    #      dockerfile: Dockerfile
+    #     ports:
+    #     - 8000:80
+
 
     server:
         container_name: server-side
