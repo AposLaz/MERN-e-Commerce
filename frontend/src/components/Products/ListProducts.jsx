@@ -5,6 +5,7 @@ import logger from 'use-reducer-logger'
 import axios from 'axios'
 import { useEffect } from 'react'
 import { useReducer } from 'react'
+import { Helmet } from 'react-helmet-async'
 
 const reducer = (state, action)=>{
   switch (action.type) {
@@ -44,6 +45,9 @@ function ListProducts() {
 
   return (
     <div className='container'>
+        <Helmet>
+          <title>aplazStore</title>
+        </Helmet>
         <h1>Featured Products</h1>
         <div className='list-product'>
             {

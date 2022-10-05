@@ -18,11 +18,6 @@
     margin-left: 5px;
 }
 
-.product-info .rating-card span{
-    color: #f5b800;
-    vertical-align: bottom;
-}
-
 .product-info button:hover{
     background-color: #f2f9fd; /* Green */
     color: #0277bd;

@@ -1,0 +1,37 @@
+.product-desc-row {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.product-desc-col {
+    flex: 1;                        /* 1 = same size*/
+    margin: 0 auto;
+}
+
+.product-desc-col:nth-child(1) {
+    flex: 2;                        /* first child has larger size */
+}
+
+.product-desc-row .image img{
+    max-width: 80%;
+    object-fit: cover;
+    box-shadow: 1px 1px 3px 1px var(--light-gray-bg);
+}
+
+
+@media only screen and (max-width: 768px){
+    .product-desc-row {
+        flex-wrap: wrap;
+    }
+
+    .product-desc-col {
+        flex-basis: 100%;
+    }
+
+    .image img{
+        max-width: 100%;
+    }
+
+
+}

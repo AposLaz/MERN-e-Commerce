@@ -2,20 +2,29 @@ import React from 'react'
 import StarIcon from '@mui/icons-material/Star';
 import StarBorderIcon from '@mui/icons-material/StarBorder';
 import StarHalfIcon from '@mui/icons-material/StarHalf';
+import styled from 'styled-components'
 
 /**
  * 
  * @param rating 
  * @param numReviews 
- * @returns stars
+ * @returns stars for rating
+ * 
  */
+
+const RatingStyle = styled.div`
+    span{
+        color: #f5b800;
+        vertical-align: bottom;
+    }
+`
 
 function RatingProduct({rating,numReviews}) {
 
     const array =  Array.apply(null,Array(5));
     
 return (
-    <div className='rating-card'>
+    <RatingStyle className='rating-card'>
         <span>
             {
                 array.map((val,i)=>{
@@ -33,7 +42,7 @@ return (
             }
         </span>
         <span> {numReviews} reviews</span>  
-    </div>
+    </RatingStyle>
 )}
 
 export default RatingProduct
