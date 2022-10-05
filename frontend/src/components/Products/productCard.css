@@ -1,5 +1,5 @@
 .product {
-    border: 1px solid var(--gray-bg);
+    border: 1px solid var(--light-gray-bg);
     margin: 1rem;
 }
 
@@ -15,7 +15,17 @@
 }
 
 .product-info p{
-    margin: 5px;
+    margin-left: 5px;
+}
+
+.product-info .rating-card span{
+    color: #f5b800;
+    vertical-align: bottom;
+}
+
+.product-info button:hover{
+    background-color: #f2f9fd; /* Green */
+    color: #0277bd;
 }
 
 
@@ -23,7 +33,6 @@
     .product img {
         max-width: 300px;
         max-height: 300px;
-        object-fit: fill;
     }
 }
 

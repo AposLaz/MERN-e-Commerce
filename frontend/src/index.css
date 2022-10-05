@@ -31,6 +31,7 @@
 }
 :root{
   --gray-bg: #404040;
+  --light-gray-bg: rgb(202, 193, 193);
   --dark-bg: #000;
   --white: #fff;
 }
@@ -40,12 +41,11 @@ html{
   overflow-x: hidden;
 }
 
-header {
-  background-color: var(--gray-bg);
-  padding: 1rem; 
+.nav-bar {
+  padding: 1rem;
 }
 
-header a {
+.nav-bar a {
   text-decoration: none;
   color: var(--white);
   font-family: 'Montserrat-Bold';
@@ -56,8 +56,16 @@ main{
 }
 
 .container {
+  position: relative;
   max-width: 100%;
   width: 90%;
   margin: 0 auto;
   text-align: center;
+}
+
+.footer {
+  bottom: 0;
+  width: 100%;
+  padding: 1rem;
+  background-color: red;
 }
